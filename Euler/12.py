@@ -1,3 +1,5 @@
+#Highly divisible triangular number
+#-Researched about triangular formula
 
 def count(n):
     return sum([1 for i in range(1, (n//2) + 1) if not n % i])
