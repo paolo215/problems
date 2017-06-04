@@ -1,6 +1,6 @@
 # Unit test for Array
 import unittest
-from Array.sumPairs import sumPairs
+import array_problems as ar
 
 def sameArray(output, expected):
     if len(output) != len(expected):
@@ -48,22 +48,26 @@ class ArrayTest(unittest.TestCase):
 
 
     def test_sumPairs1(self):
-        arr = [8, 7, 2, 5, 3, 1]
+        input_array = [8, 7, 2, 5, 3, 1]
         total = 10
-        pairs = sumPairs(arr, total)
+        pairs = ar.sumPairs(input_array, total)
         expectedPairs = [(8,2), (7,3)]
        
         self.assertTrue(sameArray(pairs, expectedPairs))
       
 
     def test_sumPairs2(self):
-        arr = [1, 2, 3, 4, 5]
+        input_array = [1, 2, 3, 4, 5]
         total = 10
 
-        pairs = sumPairs(arr, total)
+        pairs = ar.sumPairs(input_array, total)
         expectedPairs = []
 
         self.assertTrue(sameArray(pairs, expectedPairs))
+
+
+    
+
 
 
 
