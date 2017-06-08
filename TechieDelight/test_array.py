@@ -145,6 +145,29 @@ class ArrayTest(unittest.TestCase):
         self.assertTrue(output == expected)
 
 
+    def test_largest_sub_array_formed_by_consecutive_integers1(self):
+        arr = [2,0,2,1,4,3,1,0]
+        output = ar.largest_sub_array_formed_by_consecutive_integers(arr)
+        expected = [0,2,1,4,3]
+         
+        self.assertTrue(output == expected)
+
+    def test_largest_sub_array_formed_by_consecutive_integers2(self):
+        arr = [1,2,3,0,5,4,3,2,1]
+        output = ar.largest_sub_array_formed_by_consecutive_integers(arr)
+        expected = [1,2,3,0,5,4]
+        self.assertTrue(output == expected)
+
+
+    def test_largest_sub_array_formed_by_consecutive_integers3(self):
+        arr = []
+        output = ar.largest_sub_array_formed_by_consecutive_integers(arr)
+        expected = None
+         
+        self.assertTrue(output == expected)
+
+
+
 
 if __name__ == "__main__":
     unittest.main()
