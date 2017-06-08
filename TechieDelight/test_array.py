@@ -121,6 +121,13 @@ class ArrayTest(unittest.TestCase):
 
         self.assertTrue(not (output == expectedOutput))
 
+    def test_find_duplicate1(self):
+        arr = [1, 2, 3, 4, 4]
+        output = ar.find_duplicate(arr)
+        expected = 4
+
+        self.assertTrue(output == expected)
+
 
 if __name__ == "__main__":
     unittest.main()

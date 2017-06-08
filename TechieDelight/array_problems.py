@@ -44,6 +44,18 @@ def binary_array_sort(arr):
 
     return sorted_arr
 
+# Given a limited range array of size n where array contains elements between
+# 1 to n-1 with one element repeating, find the duplicate nubmer in it.
+def find_duplicate(arr):
+    nums = {}
+    duplicate = None
+    for i in arr:
+        if not i in nums:
+            nums[i] = True
+        else:
+            duplicate = i
+    return duplicate
+
 def main():
     arr = input("Array: ")
     
