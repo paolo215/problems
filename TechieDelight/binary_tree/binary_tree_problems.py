@@ -1,27 +1,15 @@
-class Node:
-    def __init__(self, key, left=None, right=None):
-        self.value = value
-        self.left = left
-        self.right = right
 
-    def getLeft(self):
-        return self.left
+def isIdentical(a, b):
+    if a == None and b == None:
+        return True
 
-    def getRight(self):
-        return self.right
+    if not any([a,b]):
+        return False
 
-    def getValue(self):
-        return self.value
+    return a.getValue() == b.getValue() and (isIdentical(a.getLeft(), b.getLeft()) \
+            and isIdentical(a.getRight(), a.getRight()))
 
 
-    def setLeft(self, left):
-        self.left = left
-
-    def setRight(self, right):
-        self.right = right
-
-    def setValue(self, value):
-        self.value = value
 
 
 
