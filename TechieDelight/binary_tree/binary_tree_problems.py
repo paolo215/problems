@@ -1,5 +1,5 @@
 
-def isIdentical(a, b):
+def isIdenticalRecursive(a, b):
     if a == None and b == None:
         return True
 
