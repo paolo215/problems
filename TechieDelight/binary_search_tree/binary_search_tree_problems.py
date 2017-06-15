@@ -24,12 +24,12 @@ class BinarySearchTree:
         # Go to the right if value >= value of the root
         if value >= root.getValue():
             if root.getRight():
-                insert(root.getRight(), value)
+                self.__insert(root.getRight(), value)
             else:
                 root.setRight(Node(value))
         else:
             if root.getLeft():
-                insert(root.getLeft(), value)
+                self.__insert(root.getLeft(), value)
             else:
                 root.setLeft(Node(value))
 

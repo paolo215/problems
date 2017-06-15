@@ -7,13 +7,21 @@ class TestBinarySearchTree(unittest.TestCase):
     def test_insert(self):  
         tree = bst.BinarySearchTree()
         tree.insert(4)
+        self.assertTrue(tree.root.getValue() == 4)
+
         tree.insert(2)
+        self.assertTrue(tree.root.getLeft().getValue() == 2)
 
-        inorder_output = []
-        tree.inorder(inorder_output)
-        expected = [2, 4]
 
-        self.assertTrue(expected == inorder_output)
+        tree.insert(6)
+        self.assertTrue(tree.root.getRight().getValue() == 6)
+
+        tree.insert(8)
+        self.assertTrue(tree.root.getRight().getRight().getValue() == 8)
+
+        tree.insert(5)
+        self.assertTrue(tree.root.getRight().getLeft().getValue() == 5)
+
 
 
 if __name__ == "__main__":
